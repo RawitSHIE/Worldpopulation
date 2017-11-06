@@ -52,6 +52,5 @@ def main():
 
         dict_con[i] = df_world.loc[i, year]
     sort_high = sorted(dict_con.values())[-1:-5:-1]
-    print
     print(sort_high)
 main()
