@@ -13,7 +13,7 @@ def main():
 
     #-----read file-----#
     df_male = pd.read_csv("../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
-    df_female = pd.read_csv("../DATA/Female/Female_Total_Population.csv", encoding = "UTF-8")
+    df_female = pd.read_csv("../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
 
 
 #----read CSV----#
@@ -57,7 +57,7 @@ def main():
 
     custom_style = Style(
         background='Black',
-        plot_background='Black',
+        plot_background='Transparent',
         foreground='White',
         foreground_strong='White',
         foreground_subtle='#630C0D',
