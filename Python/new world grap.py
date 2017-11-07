@@ -11,13 +11,12 @@ def column_index(df, query_cols):
 #############################################################################################################################################################################################################################
 def main():
     year = input()
-    df_world = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
+    df_world = pd.read_csv("../DATA/fixed index total.csv", encoding = "UTF-8")
     df_world.index = df_world['Country Name']
     reg = {v:0 for v in set(df_world['Country Code'])}
 #############################################################################################################################################################################################################################
     for idx, val in enumerate(df_world.values):
         col = column_index(df_world, year)
-        # print(col)
         i = val[0]
         if i not in ["World", "East Asia & Pacific (excluding high income)", "Early-demographic dividend", "East Asia & Pacific", "Europe & Central Asia (excluding high income)","Europe & Central Asia"\
     "World", "High income", "Low income", "Lower middle income", "Low & middle income",\
@@ -47,8 +46,7 @@ def main():
                     )
 #############################################################################################################################################################################################################################
     worldmap_chart = pg.maps.world.World()
-    # print(years)
-    worldmap_chart.title = 'WOlrd Popultaion in any years'
+    worldmap_chart.title = 'World Popultaion in any years'
     worldmap_chart.add('In {}'.format(year), reg)
-    worldmap_chart.render_to_file('Graph SVG/world map.svg') 
+    worldmap_chart.render_to_file('Graph SVG/World Map.svg') 
 main()

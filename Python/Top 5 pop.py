@@ -9,49 +9,77 @@ def main():
     df_world = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
     df_world.index = df_world['Country Name']
     dict_con = {}
+    restrict = ["World"\
+    , "East Asia & Pacific (excluding high income)"\
+    , "Early-demographic dividend"\
+    , "East Asia & Pacific"\
+    , "Europe & Central Asia (excluding high income)"\
+    , "Europe & Central Asia"\
+    , "World"\
+    , "High income"\
+    , "Low income"\
+    , "Lower middle income"\
+    , "Low & middle income"\
+    , "Middle East & North Africa"\
+    , "Middle East & North Africa (excluding high income)"\
+    , "Other small states"\
+    , "Post-demographic dividend"\
+    , "Latin America & the Caribbean (IDA & IBRD countries)"\
+    , "Middle East & North Africa (IDA & IBRD countries)"\
+    , "Middle income"\
+    , "Upper middle income"\
+    , "East Asia & Pacific (IDA & IBRD countries)"\
+    , "Europe & Central Asia (IDA & IBRD countries)"\
+    , "South Asia (IDA & IBRD)"\
+    , "European Union"\
+    , "Fragile and conflict affected situations"\
+    , "Heavily indebted poor countries (HIPC)"\
+    , "IBRD only"\
+    , "IDA & IBRD total"\
+    , "IDA total"\
+    , "IDA blend"\
+    , "IDA only"\
+    , "Late-demographic dividend"\
+    , "North America"\
+    , "OECD members"\
+    , "Pacific island small states"\
+    , "Sub-Saharan Africa (excluding high income)"\
+    , "Latin America & the Caribbean (IDA & IBRD countries)"\
+    , "Sub-Saharan Africa (IDA & IBRD countries)"\
+    , 'South Asia'\
+    , 'Euro area'\
+    , 'Least developed countries: UN classification'\
+    , 'Latin America & Caribbean (excluding high income)'\
+    , "Pre-demographic dividend"\
+    , "Latin America & Caribbean"\
+    , "Arab World"\
+    , 'Sub-Saharan Africa']
+    
     for i in df_world['Country Name']:
-        if i == "World"\
-        or i == "East Asia & Pacific (excluding high income)"\
-        or i == "Early-demographic dividend"\
-        or i == "East Asia & Pacific"\
-        or i == "Europe & Central Asia (excluding high income)"\
-        or i == "Europe & Central Asia"\
-        or i == "World"\
-        or i == "High income"\
-        or i == "Low income"\
-        or i == "Lower middle income"\
-        or i == "Low & middle income"\
-        or i == "Middle East & North Africa"\
-        or i == "Middle East & North Africa (excluding high income)"\
-        or i == "Other small states"\
-        or i == "Post-demographic dividend"\
-        or i == "Latin America & the Caribbean (IDA & IBRD countries)"\
-        or i == "Middle East & North Africa (IDA & IBRD countries)"\
-        or i == "Middle income"\
-        or i == "Upper middle income"\
-        or i == "East Asia & Pacific (IDA & IBRD countries)"\
-        or i == "Europe & Central Asia (IDA & IBRD countries)"\
-        or i == "South Asia (IDA & IBRD)"\
-        or i == "European Union"\
-        or i == "Fragile and conflict affected situations"\
-        or i == "Heavily indebted poor countries (HIPC)"\
-        or i == "IBRD only"\
-        or i == "IDA & IBRD total"\
-        or i == "IDA total"\
-        or i == "IDA blend"\
-        or i == "IDA only"\
-        or i == "Late-demographic dividend"\
-        or i == "North America"\
-        or i == "OECD members"\
-        or i == "Pacific island small states"\
-        or i == "Sub-Saharan Africa (excluding high income)"\
-        or i == "Latin America & the Caribbean (IDA & IBRD countries)"\
-        or i == "Sub-Saharan Africa (IDA & IBRD countries)"\
+        if i in restrict\
         or math.isnan(df_world.loc[i, year]) is True:
             continue
 
         dict_con[i] = df_world.loc[i, year]
-    sort_high = sorted(dict_con.values())[-1:-5:-1]
-    print
+
+    sort_high = sorted(dict_con, key=dict_con.__getitem__)[-1:-6:-1]
+    sort_high_val = [dict_con[i] for i in sort_high]
+
     print(sort_high)
+    print(sort_high_val)
+    custom_style = Style(
+                    background='Black',
+                    plot_background='Black',
+                    foreground='White',
+                    foreground_strong='White',
+                    foreground_subtle='#630C0D',
+                    opacity='.6',
+                    transition='100ms ease-in',
+                    colors=('#0090F1',  '#E89B53')
+                    )
+    bar_chartboth = pg.Bar(interpolate='cubic', style=custom_style)
+    bar_chartboth.x_labels = map(str, sort_high)
+    bar_chartboth.add("Population", sort_high_val)
+    bar_chartboth.render_to_file('Graph SVG/Top 5.svg')
+
 main()
