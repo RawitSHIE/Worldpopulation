@@ -48,5 +48,5 @@ def main():
     worldmap_chart = pg.maps.world.World()
     worldmap_chart.title = 'World Popultaion in any years'
     worldmap_chart.add('In {}'.format(year), reg)
-    worldmap_chart.render_to_file('Graph SVG/World Map.svg') 
+    worldmap_chart.render_to_file('Graph SVG/World_Map.svg') 
 main()
