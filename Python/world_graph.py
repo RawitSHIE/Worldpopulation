@@ -4,11 +4,15 @@ import math
 from pygal.style import Style
 from pygal.style import NeonStyle
 
-def main():
+def worldgraph():
     start = int(input())
     stop = int(input())
+    #----Read CSV----#
     df_world = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
     df_world.index = df_world['Country Name']
+
+
+    #----Adding years pop----#
     years = []
     for i in range(start, stop+1):
         total = 0
@@ -18,18 +22,10 @@ def main():
             total += j
         years += [total]
 
-    # custom_style = Style(
-    #                 background='transparent',
-    #                 plot_background='transparent',
-    #                 foreground='White',
-    #                 foreground_strong='White',
-    #                 foreground_subtle='#630C0D',
-    #                 opacity='.6',
-    #                 transition='100ms ease-in',
-    #                 colors=('#ff0066',  '#E89B53')
-    #                 )
+
+    #----Pygal----#
     country_rawpop = pg.StackedLine(fill=True, style=NeonStyle, width = 2000)
     country_rawpop.x_labels = map(str, [str(i) for i in range(start, stop+1)])
     country_rawpop.add("Year:", years)
     country_rawpop.render_to_file('Graph SVG/World_Graph.svg')
-main()
+worldgraph()

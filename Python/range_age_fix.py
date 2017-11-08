@@ -1,13 +1,12 @@
 import pandas as pd
 import pygal as pg
-from pygal.style import Style
-def main():
+from pygal.style import NeonStyle
+def rangeage():
     """pop indicator"""
 
     #----input----#
     Country = input()
     year = input()
-
 
 #----------------------------------------------------------------------------------#
 
@@ -54,20 +53,10 @@ def main():
           "Age 60-64","Age 65-69","Age 70-74","Age 75-79","Age 80++"]
 
 #----pygal----#
-
-    custom_style = Style(
-        background='Black',
-        plot_background='Transparent',
-        foreground='White',
-        foreground_strong='White',
-        foreground_subtle='#630C0D',
-        opacity='.6',
-        transition='400ms ease-in',
-        colors=('#0090F1',  '#E89B53')
-        )
-    bar_chartboth = pg.HorizontalStackedBar(interpolate='cubic', style=custom_style)
-    bar_chartboth.x_labels = map(str, bar)
-    bar_chartboth.add("Male", male_age)
-    bar_chartboth.add("Female", female_age)
-    bar_chartboth.render_to_file('Graph SVG/Range_both_en.svg')
-main()
+    age_pyramid = pg.Pyramid(interpolate='cubic', style=NeonStyle)
+    age_pyramid.x_labels = map(str, bar)
+    age_pyramid.title = 'Population of each Age Range'
+    age_pyramid.add("Male", male_age)
+    age_pyramid.add("Female", female_age)
+    age_pyramid.render_to_file('Graph SVG/Range_both_en.svg')
+rangeage()
