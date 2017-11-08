@@ -2,6 +2,8 @@ import pandas as pd
 import pygal as pg
 import math
 import numpy as np
+from utils import check_path
+check_path("Graph SVG")
 #############################################################################################################################################################################################################################
 def column_index(df, query_cols):
     cols = df.columns.values
@@ -41,5 +43,5 @@ def main():
     worldmap_chart = pg.maps.world.World(fill=True, interpolate='cubic', style=NeonStyle)
     worldmap_chart.title = 'World Populations'
     worldmap_chart.add('In {}'.format(year), reg)
-    worldmap_chart.render_to_file('Graph SVG/World_Map.svg') 
+    worldmap_chart.render_to_file('Graph SVG/World_Map.svg')
 main()
