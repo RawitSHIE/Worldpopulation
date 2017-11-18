@@ -54,7 +54,7 @@ def main():
         , 'Sub-Saharan Africa']:
             continue
         new = 2
-        tabUrl = "https://en.wikipedia.org/wiki/";
+        taburl = "https://en.wikipedia.org/wiki/";
         term = i;
         webbrowser.open(tabUrl+term, new=new)
 main()

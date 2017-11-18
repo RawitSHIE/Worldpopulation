@@ -5,7 +5,6 @@ def malefemale(country, year):
     """raito"""
     total_male = pd.read_csv("../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
     total_female = pd.read_csv("../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
-    country = input()
     hav = False
 
     for i in range(len(total_male['Country Name'])):
@@ -27,11 +26,15 @@ def malefemale(country, year):
             )
         pie_chart = pygal.Pie(fill=True, interpolate='cubic', style=NeonStyle)
         pie_chart.value_formatter = lambda x: "{:,}".format(x)
-        pie_chart.title = 'Males and Females (in %)'
+        pie_chart.title = 'Males and Females (in %)({0} : {1} AD)'.format(country, year)
         pie_chart.add('Males : {:,} People'.format(male), male_per)
         pie_chart.add('Females : {:,} People'.format(female), female_per)
-        pie_chart.render_to_file('Graph SVG/gender_pie_chart.svg')
+        pie_chart.render_to_file('Graph SVG/gender_ratio/gender_ratio_{0}.svg'.format(year))
     else:
         print('not found')
-malefemale(input(), int(input()))
-
+def recur():
+    country = input()
+    for i in range(1960, 2017):
+        malefemale(country, str(i))
+        print(i)
+recur()

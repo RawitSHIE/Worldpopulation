@@ -53,8 +53,9 @@ def rangeage():
           "Age 60-64","Age 65-69","Age 70-74","Age 75-79","Age 80++"]
 
 #----pygal----#
-    age_pyramid = pg.Pyramid(interpolate='cubic', style=NeonStyle)
+    age_pyramid = pg.Pyramid(interpolate='cubic', style=NeonStyle, x_label_rotation=90)
     age_pyramid.x_labels = map(str, bar)
+    age_pyramid.value_formatter = lambda x: "{:,}".format(int(x))
     age_pyramid.title = 'Population of each Age Range'
     age_pyramid.add("Male", male_age)
     age_pyramid.add("Female", female_age)

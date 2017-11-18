@@ -1,10 +1,10 @@
 import pandas as pd
 import pygal as pg
+from pygal.style import Style
 import math
 
 
 def main():
-    year = input()
     df_world = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
     df_world.index = df_world['Country Name']
     dict_con = {}
@@ -53,29 +53,28 @@ def main():
     , "Latin America & Caribbean"\
     , "Arab World"\
     , 'Sub-Saharan Africa']
-    
-    for i in df_world['Country Name']:
-        if i in restrict\
-        or math.isnan(df_world.loc[i, year]) is True:
-            continue
+    for k in range(1960,2017):
+        m = str(k)
+        for i in df_world['Country Name']:
+            if i in restrict\
+            or math.isnan(df_world.loc[i, m]):
+                continue
 
-        dict_con[i] = df_world.loc[i, year]
+            dict_con[i] = df_world.loc[i, m]
 
-    sort_high = sorted(dict_con, key=dict_con.__getitem__)[-1:-6:-1]
-    sort_high_val = [dict_con[i] for i in sort_high]
+        sort_high = sorted(dict_con, key=dict_con.__getitem__)[-1:-6:-1]
+        sort_high_val = [dict_con[i] for i in sort_high]
 
-    print(sort_high)
-    print(sort_high_val)
-
-    from pygal.style import NeonStyle
-    NeonStyle = NeonStyle(
-            colors=('#5555FF', '#550000')
-            )
-    bar_chartboth = pg.Bar(interpolate='cubic', style=NeonStyle)
-    bar_chartboth.title = 'Top 5 highest population (year)'
-    bar_chartboth.value_formatter = lambda x: "{:,} People".format(x)
-    bar_chartboth.x_labels = map(str, sort_high)
-    bar_chartboth.add("Population", sort_high_val)
-    bar_chartboth.render_to_file('Graph SVG/Top 5.svg')
-
+        print(sort_high)
+        print(sort_high_val)
+        from pygal.style import NeonStyle
+        NeonStyle = NeonStyle(
+                colors=('#5555FF', '#550000')
+                )
+        bar_chartboth = pg.Bar(interpolate='cubic', style=NeonStyle)
+        bar_chartboth.title = 'Top 5 highest population (year:{0})'.format(k)
+        bar_chartboth.value_formatter = lambda x: "{:,} People".format(x)
+        bar_chartboth.x_labels = map(str, sort_high)
+        bar_chartboth.add("Population", sort_high_val)
+        bar_chartboth.render_to_file('Graph SVG/top_5/top_{0}.svg'.format(k))
 main()
