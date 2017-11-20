@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>each contry</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    
+        <!-- Custom CSS -->
+        <link href="css/stylish-portfolio.css" rel="stylesheet">
+        <link href="css/Footer1.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <style>
+        body {
+            color:white
+        } 
+        .zoomin object {
+        height: 600px;
+        width: 100%;
+        -webkit-transition: all 2s ease;
+           -moz-transition: all 2s ease;
+            -ms-transition: all 2s ease;
+                transition: all 2s ease;
+      }
+      .zoomin object:hover {
+        width: 800px;
+        height: 800px;}
+
+    .pimg1{
+    background-image:url(img/city.jpg);
+    min-height:100%; 
+    }
+    .pimg1{
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /*fixed = parallax
+    scroll = nomal */
+    background-attachment: fixed  
+    }
+    .ptect{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:27px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+    }
+    .ptext, .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px; 
+}
+        </style>
+    </head>
+
+<body style="background-color:black;">
+
+<!--navbar-->
+      <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+          <i class="fa fa-bars"></i>
+      </a>
+      <nav id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+              <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+                  <i class="fa fa-times"></i>
+              </a>
+              <li class="sidebar-brand">
+                  <a class="js-scroll-trigger" href="#top">Start Bootstrap</a>
+              </li>
+              <li>
+                  <a class="js-scroll-trigger" href="index.html">Home</a>
+              </li>
+              <li>
+                  <a class="js-scroll-trigger" href="about.html">About</a>
+              </li>
+              <li>
+                  <a class="js-scroll-trigger" href="search.html">Search</a>
+              </li>
+              <li>
+                  <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                  <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close" ).click();>Contact</a>
+              </li>
+          </ul>
+      </nav>
+      <div class="container">
+          <h1 style="font-family:Impact;color:azure;font-size:80px; text-align:center"><strong>COUNTRY'S POPULATION</strong></h1><br>
+      </div>
+      <!--pic background-->
+      <div class="pimg1">
+        <div class="ptect">
+            <span class="border">
+                About World Population
+    
+            </span>
+    
+        </div>
+    </div>
+<!--flag -->
+    <div class="container">
+        <div class="row"style="color:white">
+            <div class="col-sm-6">
+                <img src="https://lh3.googleusercontent.com/p4LMJKR4GXraabPy4rYAXTsJyJgVb_RtCnoQM1JPwxoQAxcp4deoRTq9baP69Z2DEw=h900" width="50%" height="100%" alt ="This is flag"style='box-shadow: 0 4px 8px 0 rgba(252, 250, 250, 0.5), 0 6px 20px 0 rgba(252, 250, 250, 0.4);'>
+            </div>
+            <div class="col-sm-6" style="color:white">
+                <h1>Thailand</h1>
+            </div>
+        </div>
+    </div><br>
+    <!-- graph population-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 zoomin">
+                <object type="image/svg+xml" data="../Python/Graph SVG/pop_bar_chart.svg" width="100%" height="600px"></object>
+            </div>
+            <div class="col-sm-6" style="color:white">
+                <h1>Current Population</h1>
+                <h1>10000000000</h1>
+                <!--dropdown-->
+                <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Years
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Normal</a></li>
+                          <li class="disabled"><a href="#">Disabled</a></li>
+                          <li class="active"><a href="#">Active</a></li>
+                          <li><a href="#">Normal</a></li>
+                        </ul>
+                      </div>
+                 <!-- Header -->
+                <header class="header" id="top">
+                    <div class="text-vertical-center">
+                        <div style= "background-color: transparent;">
+                            <h1 style="color:azure">World Population</h1>
+                            <h3 style="color:whitesmoke">Find your interested country</h3>
+                        </div>
+                
+                        <video id="bgvid" playsinline autoplay loop muted>
+                        <source src="C:\Users\Rawitgun\Desktop\PSIT PROJECT\Web\video\Earth From Space [ISS Time-lapse In 4K].mp4" type="video/mp4">
+                        </video>
+                        <br>
+                        <form method="get" action="http://www.google.com/search">
+                            <input type="text" name="?q= " placeholder="Search">
+                        </form>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <!--graph range and gender-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 zoomin">
+                <object type="image/svg+xml" data="../Python/Graph SVG/Range_both_en.svg" width="100%" height="600px"></object>
+            </div>
+            <div class="col-sm-6 zoomin">
+                <object type="image/svg+xml" data="../Python/Graph SVG/gender_pie_chart.svg" width="100%" height="600px"></object>
+            </div>
+        </div>
+        </div>
+
+        
+    <!-- Footer -->
+      <div id="footer">
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3><span><img src="slideshow/top bar.png" width="100"></span></h3>
+
+                <p class="footer-links">
+                    <a href="intro 2.html">Home</a>
+                    ·
+                    <a href="Personal info.html">About</a>
+                    ·
+                    <a href="achievement.html">Acheivement</a>
+                    ·
+                    <a href="performance.htm">Performance</a>
+                    ·
+                    <a href="contact.html">Contact</a>
+                </p>
+
+                <p class="footer-company-name">RAWITSHIE &copy; 2016</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>478/40 Address Pathumwan</span> Bangkok, Thailand</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+66 91 0349301</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">Rawitgun@gmail.com</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About Website</span>
+                    These Webbsite is my first mock-up portfolio for University entrance
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/stylish-portfolio.js"></script>
+    <script>
+        function openLeftMenu() {
+            document.getElementById("leftMenu").style.display = "block";
+        }
+        function closeLeftMenu() {
+            document.getElementById("leftMenu").style.display = "none";
+        }
+
+        function openRightMenu() {
+            document.getElementById("rightMenu").style.display = "block";
+        }
+        function closeRightMenu() {
+            document.getElementById("rightMenu").style.display = "none";
+        }
+    </script>
+</body>
+</html>

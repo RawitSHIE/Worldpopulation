@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About beta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <link href="css/Footer1.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    body, h1,h2,h3,h4,h5,h6 { text-align: center}
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+        margin:0;
+    }
+
+    .zoomin img {
+        height: 200px;
+        width: 200px;
+        -webkit-transition: all 2s ease;
+           -moz-transition: all 2s ease;
+            -ms-transition: all 2s ease;
+                transition: all 2s ease;
+      }
+      .zoomin2 img {
+        height: 250px;
+        width: 300px;
+        -webkit-transition: all 2s ease;
+           -moz-transition: all 2s ease;
+            -ms-transition: all 2s ease;
+                transition: all 2s ease;
+      }
+      .zoomin img:hover {
+        width: 300px;
+        height: 300px;}
+     
+        @-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    } 
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+    @keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+.swing:hover
+{
+        -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+.pimg1{
+    background-image:url(img/worldpopulation.jpg);
+    min-height:100%; 
+}
+.pimg1{
+    position: relative;
+    opacity: 1;
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /*fixed = parallax
+    scroll = nomal */
+    background-attachment: fixed  
+}
+.ptect{
+    position:absolute;
+    top:50%;
+    width:100%;
+    text-align:center;
+    color:#000;
+    font-size:27px;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+.ptext, .border{
+    background-color:#111;
+    color:#fff;
+    padding:20px; 
+}
+  </style>
+</head>
+
+<body>
+<!--navbar-->
+<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">
+    <i class="fa fa-bars"></i>
+</a>
+<nav id="sidebar-wrapper" style="text-align:left">
+    <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle">
+            <i class="fa fa-times"></i>
+        </a>
+        <li class="sidebar-brand">
+            <a class="js-scroll-trigger" href="#top">Start Bootstrap</a>
+        </li>
+        <li>
+            <a class="js-scroll-trigger" href="index.html">Home</a>
+        </li>
+        <li>
+            <a class="js-scroll-trigger" href="about.html">About</a>
+        </li>
+        <li>
+            <a class="js-scroll-trigger" href="search.html">Search</a>
+        </li>
+        <li>
+            <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+            <a class="js-scroll-trigger" href="#contact" onclick=$( "#menu-close" ).click();>Contact</a>
+        </li>
+    </ul>
+</nav>
+<div class="pimg1">
+    <div class="ptect">
+        <span class="border">
+            About World Population
+
+        </span>
+
+    </div>
+</div>
+<!--
+<div class="container-fluid"  style="background-color:black; height:150px"><br>
+  <h2 style="color:white"><strong>ABOUT THE PROJECT WORLD POPULATION</strong></h2>
+  <p></p>      
+  <h3 style="color:white">Key features of our <span style="color:red">Project</span></h3>
+  
+</div>-->
+
+<div class="jumbotron">
+  <div class="container">
+      <div class="col-sm-6" style='font-size:20px'><strong>About World Population</strong><br>
+        <p style='font-size:18px'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+      <div class="col-sm-6" style='font-size:20px'><strong>Our Goal</strong><br>
+        <p style='font-size:18px'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- tools-->
+<div class="container-fluid">
+    <h3><strong>Our Tools</strong></h3><br><br>
+    <p></p>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4 swing">
+           <img src='img/pandas.png' width="300" height="200"> 
+          </div>
+          <div class="col-sm-4 swing">
+            <img src='img/pygal.png' width="250" height="200">
+          </div>
+          <div class="col-sm-4 swing">
+          <img src='img/flask.png' width="300" height="200">
+          </div>
+        </div>
+        <br>
+  </div>
+</div>
+  <!--team-->
+  <div class="jumbotron">
+      <h3><strong>Our Team</strong></h3><br><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 zoomin">
+            <img src="img/pat.jpg" class="img-rounded" alt="Pat"width="200" height="200"style='padding:10px;background-color:white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+            <h5>Pat<h5>
+          </div>
+          <div class="col-sm-4 zoomin">
+            <img src="img/rawit.jpg" class="img-rounded" alt="Rawit" width="200" height="200"style='padding:10px;background-color:white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+            <h5>Rawit</h5>
+          </div>
+          <div class="col-sm-4 zoomin">
+            <img src="img/lao.jpg" class="img-rounded" alt="Lao"width="200" height="200"style='padding:10px;background-color:white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+            <h5>Lao</h5>
+          </div>
+          <div class="col-sm-6 zoomin"> 
+            <img src="img/frong.jpg" class="img-rounded" alt="Frong"width="200" height="200"style='padding:10px;background-color:white;hover:red;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+            <h5>Frong</h5>
+          </div>
+          <div class="col-sm-6 zoomin">
+            <img src="img/t.jpg" class="img-rounded" alt="Tle"width="200" height="200"style='padding:10px;background-color:white;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+            <h5>Tle</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+    <!-- Footer -->
+      <div id="footer">
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3><span><img src="slideshow/top bar.png" width="100"></span></h3>
+
+                <p class="footer-links">
+                    <a href="intro 2.html">Home</a>
+                    ·
+                    <a href="Personal info.html">About</a>
+                    ·
+                    <a href="achievement.html">Acheivement</a>
+                    ·
+                    <a href="performance.htm">Performance</a>
+                    ·
+                    <a href="contact.html">Contact</a>
+                </p>
+
+                <p class="footer-company-name">RAWITSHIE &copy; 2016</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>478/40 Address Pathumwan</span> Bangkok, Thailand</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+66 91 0349301</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">Rawitgun@gmail.com</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About Website</span>
+                    These Webbsite is my first mock-up portfolio for University entrance
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-github"></i></a>
+
+                </div>
+
+            </div>
+
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/stylish-portfolio.js"></script>
+  <script>
+      function openLeftMenu() {
+          document.getElementById("leftMenu").style.display = "block";
+      }
+      function closeLeftMenu() {
+          document.getElementById("leftMenu").style.display = "none";
+      }
+
+      function openRightMenu() {
+          document.getElementById("rightMenu").style.display = "block";
+      }
+      function closeRightMenu() {
+          document.getElementById("rightMenu").style.display = "none";
+      }
+  </script>
+</div>
+</div>
+</html>
