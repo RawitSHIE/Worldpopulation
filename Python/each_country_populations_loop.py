@@ -21,10 +21,9 @@ def worldpop(country, step):
         from pygal.style import NeonStyle
         NeonStyle = NeonStyle(
         background='transparent',
-        plot_background='transparent',
         colors=('#0000FF', '#FF0000')
         )
-        line_chart = pygal.Line(fill=True, interpolate='cubic', style=NeonStyle, x_label_rotation=90)
+        line_chart = pygal.Line(fill=True, interpolate='cubic', style=NeonStyle, x_label_rotation=90, width=1000)
         line_chart.title = "{} Year: 1960 - 2016 AD".format(country)
         line_chart.x_labels = [str(i) for i in range(1960, 2017, step)]
         line_chart.value_formatter = lambda x: "{:,} People".format(x)
