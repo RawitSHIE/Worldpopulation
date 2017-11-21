@@ -417,7 +417,7 @@ input[type=text]:focus {
 }
 
 .graph-size {
-    width: 90vh;
+    width: 100vh;
     height: 70%;
     min-width: 300px;
 }
