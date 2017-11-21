@@ -13,12 +13,12 @@ def gni():
     colors=('#FF0000', '#f1be54', '#76FC00', '#3280ee'),
     )
     line_chart = pygal.Line(fill=True, interpolate='cubic', style=NeonStyle, width=1000, x_label_rotation=90)
-    line_chart.title = 'GDP per Capitar (in USD)'
+    line_chart.title = 'GDP per Capita (in USD)'
     line_chart.x_labels = map(str, range(1961, 2017))
     line_chart.value_formatter = lambda x: "%.2f" %x + "$"
     line_chart.add('China', gdp_sheet.loc["China"][5:61])
     line_chart.add('Thailand', gdp_sheet.loc["Thailand"][5:61])
     line_chart.add('Japan', gdp_sheet.loc["Japan"][5:61])
     line_chart.add('United States', gdp_sheet.loc["United States"][5:61])
-    line_chart.render_to_file('Graph SVG/gdp_line_chart.svg')
+    line_chart.render_to_file('Graph SVG/gdpp_line_chart.svg')
 gni()

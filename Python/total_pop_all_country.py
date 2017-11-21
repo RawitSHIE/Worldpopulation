@@ -10,8 +10,9 @@ def gdp():
     from pygal.style import NeonStyle
     NeonStyle = NeonStyle(
     background='transparent',
+    colors=('#FF0000', '#f1be54', '#76FC00', '#3280ee')
     )
-    line_chart = pygal.Line(fill=True, interpolate='cubic', style=NeonStyle, x_label_rotation=90)
+    line_chart = pygal.Line(fill=True, interpolate='cubic', style=NeonStyle, x_label_rotation=90, width=1000)
     line_chart.title = 'Total Population of each year'
     line_chart.x_labels = map(str, range(1960, 2017, 4))
     line_chart.value_formatter = lambda x: "{:,} People".format(int(x))
