@@ -421,3 +421,12 @@ input[type=text]:focus {
     height: 70%;
     min-width: 300px;
 }
+ .reason {
+     background-color: #1a1a1a;
+
+ }
+
+ .reason p{
+    font-size: 20px;
+    
+}
