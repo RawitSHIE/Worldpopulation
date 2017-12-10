@@ -421,6 +421,12 @@ input[type=text]:focus {
     height: 70%;
     min-width: 300px;
 }
+
+.graph-size2{
+    width: 100vh;
+    height: 70%;
+    max-width: 100%;
+}
  .reason {
      background-color: #1a1a1a;
 
