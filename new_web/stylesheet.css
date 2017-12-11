@@ -145,7 +145,7 @@ input[type=text]:focus {
     padding-bottom: 10px;
     margin-bottom: 0px;
     border-radius: 0px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #111;
 
 }
 
@@ -325,7 +325,7 @@ input[type=text]:focus {
 }
 
 .tool-1:hover{
-    background: rgba(58, 0, 97, 0.986);
+    background: rgba(100, 0, 0, 0.986);
     box-shadow: 0 0 20px 0px #aaaaaa;
     color: #fff;
     cursor: pointer;
@@ -350,7 +350,7 @@ input[type=text]:focus {
 }
 
 .tool-2:hover{
-    background: #685e01;
+    background: #0a0068;
 
     box-shadow: 0 0 20px 0px #aaaaaa;
     color: #fff;
@@ -429,6 +429,7 @@ input[type=text]:focus {
 }
  .reason {
      background-color: #1a1a1a;
+     padding: 20px;
 
  }
 
