@@ -2,7 +2,7 @@
 import pandas as pd
 import pygal
 def worldpop():
-    total_csv = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
+    total_csv = pd.read_csv("../../DATA/Total population.csv", encoding = "UTF-8")
     country = input()
     step = int(input())
     pop_list = list()
@@ -27,7 +27,7 @@ def worldpop():
         line_chart.x_labels = [str(i) for i in range(1960, 2017, step)]
         line_chart.value_formatter = lambda x: "{:,} People".format(x)
         line_chart.add('Populations', pop_list)
-        line_chart.render_to_file('Graph SVG/pop_bar_chart.svg')  
+        line_chart.render_to_file('../Graph SVG/pop_bar_chart.svg')  
         print(*pop_list)
     else:
         print('not Found')
