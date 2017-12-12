@@ -11,16 +11,16 @@ def rangeage():
 #----------------------------------------------------------------------------------#
 
     #-----read file-----#
-    df_male = pd.read_csv("../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
-    df_female = pd.read_csv("../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
+    df_male = pd.read_csv("../../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
+    df_female = pd.read_csv("../../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
 
 
 #----read CSV----#
     df_fe = []
     df_ma = []
     for i in range(0, 80+1, 5):
-        df_ma += [pd.read_csv("../DATA/Male/male age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
-        df_fe += [pd.read_csv("../DATA/Female/Female age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+        df_ma += [pd.read_csv("../../DATA/Male/male age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+        df_fe += [pd.read_csv("../../DATA/Female/Female age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
 
 
 #----set index----#
