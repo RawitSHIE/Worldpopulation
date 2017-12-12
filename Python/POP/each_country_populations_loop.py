@@ -3,7 +3,7 @@ import pandas as pd
 import pygal
 import math
 def worldpop(country, step):
-    total_csv = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
+    total_csv = pd.read_csv("../../DATA/Total population.csv", encoding = "UTF-8")
     total_csv.index = total_csv["Country Name"]
     pop_list = list()
     years_list = list()
@@ -28,7 +28,7 @@ def worldpop(country, step):
         line_chart.x_labels = [str(i) for i in range(1960, 2017, step)]
         line_chart.value_formatter = lambda x: "{:,} People".format(x)
         line_chart.add('Populations', pop_list)
-        line_chart.render_to_file('Graph SVG/each_pop/pop_bar_{}.svg'.format(country))
+        line_chart.render_to_file('../Graph SVG/each_pop/pop_bar_{}.svg'.format(country))
         print(*pop_list)
     else:
         print('not Found')
@@ -36,7 +36,7 @@ def worldpop(country, step):
 
 def recur():
     step = int(input())
-    df = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
+    df = pd.read_csv("../../DATA/Total population.csv", encoding = "UTF-8")
     for i in df['Country Name']:
         worldpop(i, step)
 recur()
