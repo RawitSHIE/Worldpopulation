@@ -1,5 +1,5 @@
 """
-GNI for CN, TH, JP, USA
+GDP PER CAP for CN, TH, JP, USA
 """
 import pandas as pd
 import pygal
