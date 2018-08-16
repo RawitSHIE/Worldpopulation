@@ -3,7 +3,7 @@ import pygal
 
 def birth():
     #----Read CSV----#
-    birth_sheet = pd.read_csv("..\DATA\Birthrate\Birthrate.csv", encoding = 'UTF-8')
+    birth_sheet = pd.read_csv("../DATA/Birthrate/Birthrate.csv", encoding = 'UTF-8')
     birth_sheet.index = birth_sheet["Country Name"]
     from pygal.style import NeonStyle
     NeonStyle = NeonStyle(
