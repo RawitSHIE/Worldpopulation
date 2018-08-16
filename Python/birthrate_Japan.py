@@ -2,7 +2,7 @@ import pandas as pd
 import pygal
 
 def birth():
-    birth_sheet = pd.read_csv("..\DATA\Birthrate\Birthrate.csv", encoding = 'UTF-8')
+    birth_sheet = pd.read_csv("../DATA/Birthrate/Birthrate.csv", encoding = 'UTF-8')
     birth_sheet.index = birth_sheet["Country Name"]
     from pygal.style import NeonStyle
     NeonStyle = NeonStyle(
@@ -15,4 +15,6 @@ def birth():
     line_chart.value_formatter = lambda x: "%.2f" %x + "%"
     line_chart.add('Japan', birth_sheet.loc["Japan"][4:60])
     line_chart.render_to_file('Graph SVG/Birthrate of Japan.svg')
+    
+    # print([i for i in birth_sheet.index])
 birth()
