@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>China Analytic</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="stylesheet.css" rel="stylesheet">
+    <!-- <link href="framework.css" rel="stylesheet"> -->
+  </head>
+
+
+  <body>
+    <!--nav bar -->
+    <div class="topnav nav-pills">
+      <a id="home" href="index.html">Home</a>
+    </div>
+<!-- first page -->
+    <header class="header" style="background-color:rgb(56, 56, 56);">
+        <div class="vertical-center">
+            <div style= "background-color: transparent;" >
+                <h1 style="color:rgb(255, 255, 255)">China</h1>
+            </div>
+        </div>
+    </header>
+<!-- china graph -->
+    <header class="header" id="maingraph"style="background-color:#111;">
+        <div class="vertical-center">
+            <div style= "background-color: transparent; margin:20px" >
+                <object type="image/svg+xml" data="Img\svg\china\pop_bar_China.svg" class="graph-size"></object>
+            </div>
+            <div class="container" style="color:white;">
+                    <div class="row">
+                        <div class="col-xs 12" style="width:100%">
+                                <p style="text-align:center;">
+                                    <h2>Population Growth of China</h2>
+                                    กราฟแสดงจำนวนประชากรต่อปีของประเทศจีน (ทุก 4 ปี)
+                                </p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+<!-- range age graph -->
+    <header class="header" style="background-color:rgb(0, 0, 0);">
+        <div class="vertical-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1960.svg" class="graph-size"></object>
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1965.svg" class="graph-size"></object>
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1970.svg" class="graph-size"></object>
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1975.svg" class="graph-size"></object>
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1980.svg" class="graph-size"></object>                                        
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1985.svg" class="graph-size"></object>                                        
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1990.svg" class="graph-size"></object>                                        
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_1995.svg" class="graph-size"></object>                                        
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_2000.svg" class="graph-size"></object>                                                                                
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_2005.svg" class="graph-size"></object>                                                                                
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_2010.svg" class="graph-size"></object>                                                                                
+                    </div>
+                    <div class="carousel-item">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_2015.svg" class="graph-size"></object>                                                                  
+                    </div>
+                    <div class="carousel-item  active">
+                        <object type="image/svg+xml" data="Img/svg/china/china_range/china_range_2016.svg" class="graph-size"></object>                                                                             
+                    </div>
+                </div>
+                <a class="carousel-control-prev col-sm-1" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next col-sm-1" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <div class="container" style="color:white;">
+                        <div class="row">
+                            <div class="col-xs 12" style="width:100%">
+                                    <p style="text-align:center">
+                                        <h2>Population Pyramid Graph</h2>
+                                        ซึ่งจากการสังเกตของเราช่วงแรกของข้อมูลนั้นมีรูปแบบของกราฟปิรามิตรประชากรเป็นแบบ Expansive พบว่าประชากรช่วงอายุ 0 - 14 ปี นั้นได้เพิ่มขึ้นอย่างรวดเร็วในช่วงปี 1970 และปรับตัวลดลง
+                                        และเริ่มคงตัวในช่วงปี 1980่ ส่งผลให้ในช่วงปี 1980 - 2016 นั้นรูปแบบของกราฟปิรามิตประชากรนั้นมีรูปร่างเป็นแบบฐานแคบทั้งหมด
+                                    </p>
+                            </div>
+                        </div>
+                </div>
+        </div>
+    </header>
+
+<!-- Death and Birthrate graph -->
+<header class="header" style="background-color:rgb(0, 0, 0);">
+    <div class="vertical-center">
+        <div id="deathandbirth" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <object type="image/svg+xml" data="Img\svg\china\Deathrate of China.svg" class="graph-size"></object>                                                                                                                                        
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img\svg\china\Birthrate of China.svg" class="graph-size"></object>                                                                                                                                        
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#deathandbirth" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#deathandbirth" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <div class="container" style="color:white;">
+                <div class="row">
+                    <div class="col-xs 12" style="width:100%">
+                        <p style="text-align:center">
+                            <h2>Birthrate and Deathrate</h2>
+                            ซึ่งเมื่อนำจุดสังเกตมาจากกราฟปิรามิตรประชากรมาทียบกับตัวกราฟอัตราการเกิดและอัตราการตาย พบว่า กราฟอัตราการตายนั้นในช่วงจุดเริ่มปี 1960 มีอัตราการตายสูงมาก 
+                            และปรับลดลงอย่างรวดเร็วจนถึงช่วงปี 1970 ที่อัตราการตายของชาวจีนนั้นเริ่มคงตัวมาเรื่อยๆ ส่วนของกราฟอัตาการเกิดนั้นพบว่าเมื่อเราดูกระกอบกับอัตราการตายนั้น ในช่วงปี 1960 - 1965 
+                            อัตราการเกิดนั้นได้เพิ่มขึ้นสูงมากซึ่งตรงข้ามกับอัตราการตาย และเริ่มปรับตัวลดลงมาจนกระทั่งตั่งแต่ปั 1970 - 1978 อัตราการเกิดของประชากรจีนนั้นได้ปรับตัวลดลงอย่างรวดเร็ว จนกระทั่งปี ปี 1980
+                            ที่กราฟได้ปรับตัวสูงขึ้นอีกครั้งแต่ก็ได้ปรับตัวลดลงอีกครั้ง                      
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Ratio graph -->
+<header class="header hor-cen" style="background-color:black;">
+        <div id="ratio_bar" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_1960.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_1965.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_1970.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_1975.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_1980.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_1990.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_2000.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_2005.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_2010.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_2015.svg" class="graph-size"></object>                         
+                </div>
+                <div class="carousel-item  active">
+                    <object type="image/svg+xml" data="Img/svg/china/china_ratio/china_ratio_2016.svg" class="graph-size"></object>                         
+                </div>
+            </div>
+            <a class="carousel-control-prev col-sm-6" href="#ratio_bar" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next col-sm-1" href="#ratio_bar" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            <div class="container" style="color:white;">
+                    <div class="row">
+                        <div class="col-xs 12">
+                                <p style="text-align:center">
+                                    <h2>Gender ratio Graph</h2>
+                                    เมื่อเราลองนำอัตราส่วนของประชากรมาพิจารณา ทำให้รู้ว่าในส่วนประเทศจีนนั้น 
+                                    อัตราส่วนของเพศไม่ได้เป็นเหตุผลในการทำให้การอัตราขยายตัวประชากรเพิ่มขึ้นและลดอ่างกระทันหันเพราะจาก Chart นั้นอัตราส่วนของผู้ชายต่อผู้หญิง บวกลบกันไม่เกิน 5%
+                                    
+                                </p>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- GDP -->
+<header class="header" style="background-color:#111;">
+    <div class="vertical-center">
+        <div style= "background-color: transparent; margin:20px" >
+            <object type="image/svg+xml" data="Img/svg/china/gdp_line_chart_china.svg" class="graph-size"></object>
+        </div>
+        <div class="container" style="color:white;">
+            <div class="row">
+                <div class="col-xs 12">
+                    <p style="text-align:center">
+                        <h2>Gross Domestic Product</h2>
+                        จากการสังเกตจากกราฟ เห็นได้ว่าในช่วยปี 1960 อัตรากาารเติบโตของเศรษฐกิจของประเทศนั้นติดลบ จากนั้น ปรับตัวขึ้นอย่างรวดเร็วในปี 1964-1965 และ ต่อจากนั้น อัตราการเตบโตนั้นก็ได้เพิ่มขึ้นและลดลงบ่อยครั้ง และเริ่มนิ่งเมื่อช่วงปี 1990s
+                        เมื่อเรานำเหตุที่เกิดขึ้นของการเพิ่มลด อัตราการตายและเกิดของประชากรมาเปรียบเทียบกับ ตัว GDP
+                    </p>
+                </div>
+            </div>
+        </div>
+</header>
+<!-- GDP per capita-->
+<header class="header" style="background-color:black;">
+    <div class="vertical-center">
+        <div style= "background-color: transparent; margin:20px" >
+            <object type="image/svg+xml" data="Img/svg/china/gdpp_cn_line_chart.svg" class="graph-size"></object>
+        </div>
+        <div class="container" style="color:white;">
+            <div class="row">
+                <div class="col-xs 12">
+                    <p style="text-align:center">
+                        <h2>GDP per capita</h2>
+                        เมื่เราได้มาสังเกตจากรรายได้ต่อประชากรของจีนนั้นเมื่อเราวิเคราะห์จริงแล้วนั้น 
+                        รายได้ยนั้นแทบจะไม่มีผลกระทบใดๆกับอัตราการเกิดและดารตายเลยเพราะรายได้ที่เพิ่มขึ้นสูงจริงนั้นเพิ่มมาทำให้เห็นได้ชัดในช่วงปี 2000 นี้เอง
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Define graph -->
+<header class="header" style="background-color:#111; color:white; padding:50px;">
+    <div class="row">
+        <div class="col-sm-6">
+            <h1>Conclusion</h1>
+            <img class="col-sm-12" src="Img/refpic.JPEG">
+        </div>
+        <div class="col-sm-6">
+            <div class="reason">
+                <h1>ปี 1970 - 2013 นโยบายลูกคนเดียว</h1>
+                <p>
+                    สาเหตุที่ทำให้ ตั้งแต่ปี 1970 นั้นอัตราการเกิดของกระเทศจีนนั้นลดลง มาจาก
+                    ทางการจีนริเริ่มใช้นโยบายลูกคนเดียว โดยกำหนดให้พ่อแม่ในเขตเมืองมีลูกได้เพียงคนเดียว 
+                    ยกเว้นครอบครัวในเขตชนบทสามารถมีลูกคนที่สองได้หากลูกคนแรกเป็นผู้หญิง รวมถึงชนกลุ่มน้อยสามารถมีลูกได้มากกว่าหนึ่งคน    
+                </p>
+            </div>
+        
+            <div class="reason">
+                <p>
+                    สำหรับผู้ที่ฝ่าฝืนกฎจะต้องถูกลงโทษปรับเงินตามระดับรายได้สุทธิ บางครอบครัวที่เป็นชาวชนบทอาจถูกยึดข้าวสารอาหารแห้งและผลผลิตทางการเกษตรแทนเงินค่าปรับ 
+                    หรือบางครอบครัวที่พ่อแม่ทำงานในภาครัฐ ก็อาจถูกปลดออกจากตำแหน่ง
+                </p>
+            </div>
+        
+            <div class="reason">
+                <p>
+                    ตลอดระยะเวลามากกว่า 30 ปี ของการดำเนินนโยบายฯ มันได้กลายเป็นปัจจัยสำคัญ ที่ทำให้ลดการกำเนิดประชากรรายใหม่ถึง 400 ล้านคน 
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- select country-->     
+<div class="toolpic-row" >
+        <div class="row" style="text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0px;
+        color:aliceblue;">
+            <div class="col-sm-3 tool-1" >
+                <a href="china.html" style="color: #ffffff; text-decoration:none;">
+                    <img src="Img/china-c.png" width=100%>
+                    <h3 style="text-align:center;">China</h3>
+                </a>
+            </div>
+            
+            <div class="col-sm-3 tool-2">
+                <a href="usa.html" style="color: #ffffff; text-decoration:none;">
+                    <img src="Img/usa-c.png">
+                    <h3 style="text-align:center;">USA</h3>
+                </a>
+            </div>
+            <div class="col-sm-3 tool-3">
+                <a href="japan.html" style="color: #ffffff; text-decoration:none;">
+                    <img src="Img/japan-c.png">
+                    <h3 style="text-align:center;">Japan</h3>
+                </a>
+            </div>
+            <div class="col-sm-3 tool-4">
+                <a href="thailand.html" style="color: #ffffff; text-decoration:none;">
+                    <img src="Img/thailand-c.png">
+                    <h3 style="text-align:center;">Thailand</h3>
+                </a>
+            </div>
+        </div>
+</div>
+
+
+    <!-- footer -->
+    <footer class="jumbotron custom-j">
+        <div class="row">
+          <div class="col-sm-3" style="display:flex;
+            justify-content:center;
+            align-items:center;
+            padding-top:10px;
+            padding-right:10px;
+            padding-bottom:10px" href="https://github.com/RawitSHIE/Worldpopulation">
+
+            <a href="https://github.com/RawitSHIE/Worldpopulation" target="_blank"><div class="over row">
+               
+                  <!-- <img class="git" src="Img/github-svg.svg">  -->
+                  <div class="img" style="width:100px; height:100px;"></div>
+                  <div style="padding-left:10px; padding-top:15px">
+                    <img src="Img/github-logo-white.png" style="width:100px">
+                    
+                    <p>
+                      Fork Project
+                    </p>
+                  </div>
+              </div> 
+            </div></a>
+            <div class="col-sm-3 col-xs-12 hor-cen" style=" 
+            padding-left:2.5%;
+            padding-right:2.5%;        
+            display:flex;">
+                <div>
+                    <h1 style="width:100%;">KMITL</h1>
+                    <p>Faculty of Information Technology</p>
+                </div>
+            </div>
+            <div class="col-sm-6 hor-cen" style="width:100%; display:flex; vertical-align:center; padding:0px;">
+                <div class="col-sm-2" style="width:100%">
+
+                    <h5 style="margin:0%">Rawit</h5>
+                    <p style="font-size:15px;">60070081</p>
+
+                </div>
+                    <div class="col-sm-2" style="width:100%;">
+
+                    <h5 style="margin:0%">Nitipon</h5>
+                    <p style="font-size:15px;">60070042</p>
+
+                </div>
+                <div class="col-sm-2" style="width:100%">
+
+                    <h5 style="margin:0%">Kavepol</h5>
+                    <p style="font-size:15px;">60070003</p>
+
+                </div>
+                <div class="col-sm-2" style="width:100%">
+
+                    <h5 style="margin:0%">Natthawut</h5>
+                    <p style="font-size:15px;">60070025</p>
+
+                </div>
+                <div class="col-sm-2" style="width:100%">
+
+                    <h5 style="margin:0%">Sukantapong</h5>
+                    <p style="font-size:15px;">60070103</p>
+
+                </div>
+
+
+            </div>
+    
+        </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
