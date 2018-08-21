@@ -2,8 +2,8 @@ import pandas as pd
 import pygal as pg
 import math
 import numpy as np
-from utils import check_path
-check_path("Graph SVG")
+# from utils import check_path
+# check_path("Graph SVG")
 
 
 #----read CSV----#
@@ -61,6 +61,6 @@ def main(year):
 
 #----loop year----#
 def recur():
-    for i in range(1960, 2017):
+    for i in range(1960, 2018):
        main(str(i))
 recur()
