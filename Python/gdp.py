@@ -5,7 +5,7 @@ import pandas as pd
 import pygal
 
 def gdp():
-    gdp_sheet = pd.read_csv("../DATA/gdp/gdp.csv", encoding = 'UTF-8')
+    gdp_sheet = pd.read_csv("../DATA Update/gdp/gdp.csv", encoding = 'UTF-8')
     gdp_sheet.index = gdp_sheet["Country Name"]
     from pygal.style import NeonStyle
     NeonStyle = NeonStyle(

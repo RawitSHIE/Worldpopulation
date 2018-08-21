@@ -3,8 +3,8 @@ import pandas as pd
 import pygal
 def malefemale(country, year):
     """raito"""
-    total_male = pd.read_csv("../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
-    total_female = pd.read_csv("../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
+    total_male = pd.read_csv("../DATA Update/Male age/raw/Male Total Population.csv", encoding = "UTF-8")
+    total_female = pd.read_csv("../DATA Update/Female Age/raw/Female Total Population.csv", encoding = "UTF-8")
     # country = input()
     # year = input()
     hav = False
@@ -39,7 +39,7 @@ def malefemale(country, year):
 
 def recur():
     country = input()
-    for i in range(1960, 2017):
+    for i in range(1960, 2018):
         malefemale(country, str(i))
         print(i)
 recur()

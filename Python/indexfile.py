@@ -4,7 +4,7 @@ import math
 import pygal as pg
 import webbrowser
 def main():
-    df_world = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
+    df_world = pd.read_csv("../DATA Update/Total population.csv", encoding = "UTF-8")
     df_world.index = df_world['Country Name']
     for i in df_world['Country Name'][:5]:
         if i in ["World"\

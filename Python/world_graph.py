@@ -9,7 +9,7 @@ def worldgraph():
     stop = int(input())
     step = 2
     #----Read CSV----#
-    df_world = pd.read_csv("../DATA/Total population.csv", encoding = "UTF-8")
+    df_world = pd.read_csv("../DATA Update/Total population.csv", encoding = "UTF-8")
     df_world.index = df_world['Country Name']
     
     #----Adding years pop----#
