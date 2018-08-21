@@ -2,8 +2,8 @@ import pandas as pd
 import pygal as pg
 import math
 import numpy as np
-from utils import check_path
-check_path("Graph SVG")
+# from utils import check_path
+# check_path("Graph SVG")
 
 #----read CSV----#
 def column_index(df, query_cols):

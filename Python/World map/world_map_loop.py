@@ -56,7 +56,7 @@ def main(year):
     worldmap_chart = pg.maps.world.World(fill=True, interpolate='cubic', style=NeonStyle)
     worldmap_chart.title = 'World Populations Map ({0} AD)'.format(year)
     worldmap_chart.add('In {}'.format(year), reg)
-    worldmap_chart.render_to_file('Graph SVG/world_map/world_map_{0}.svg'.format(year))
+    worldmap_chart.render_to_file('Graph SVG/world_map_{0}.svg'.format(year))
     print(year)
 
 #----loop year----#
