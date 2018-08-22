@@ -9,16 +9,18 @@ def rangeage():
 #----------------------------------------------------------------------------------#
 
     #-----read file-----#
-    df_male = pd.read_csv("../../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
-    df_female = pd.read_csv("../../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
+    df_male = pd.read_csv("../../DATA Update/Male age/extract/Male Total Population.csv", encoding = "UTF-8")
+    df_female = pd.read_csv("../../DATA Update/Female Age/extract/Female Total Population.csv", encoding = "UTF-8")
 
 
 #----read CSV----#
     df_fe = []
     df_ma = []
-    for i in range(0, 80+1, 5):
-        df_ma += [pd.read_csv("../../DATA/Male/male age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
-        df_fe += [pd.read_csv("../../DATA/Female/Female age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+    for i in range(0, 75+1, 5):
+        df_ma += [pd.read_csv("../../DATA Update/Male age/extract/male {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+        df_fe += [pd.read_csv("../../DATA Update/Female Age/extract/female {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+    df_ma += [pd.read_csv("../../DATA Update/Male age/extract/male 80.csv", encoding = "UTF-8")]
+    df_fe += [pd.read_csv("../../DATA Update/Female Age/extract/female 80.csv", encoding = "UTF-8")]
 
 
 #----set index----#
@@ -30,7 +32,7 @@ def rangeage():
 
 
 #----collect pop----#
-    for y in range(1960, 2017):
+    for y in range(1960, 2018):
         str_y = str(y)
         male_age = []
         male_total = df_male.loc[Country,str_y]
@@ -59,6 +61,6 @@ def rangeage():
         age_pyramid.title = 'Age Seperation: Population of {0} AD ({1})'.format(y, Country)
         age_pyramid.add("Male", male_age)
         age_pyramid.add("Female", female_age)   
-        age_pyramid.render_to_file('Graph SVG/japan_range/japan_range_{0}.svg'.format(y))
+        age_pyramid.render_to_file('../Graph SVG/pylamid/ctry_range_{0}_{1}.svg'.format(Country, y))
         print(male_age, female_age)
 rangeage()

@@ -11,16 +11,18 @@ def rangeage():
 #----------------------------------------------------------------------------------#
 
     #-----read file-----#
-    df_male = pd.read_csv("../../DATA/Male/Male Total Population.csv", encoding = "UTF-8")
-    df_female = pd.read_csv("../../DATA/Female/Female Total Population.csv", encoding = "UTF-8")
+    df_male = pd.read_csv("../../DATA Update/Male age/extract/Male Total Population.csv", encoding = "UTF-8")
+    df_female = pd.read_csv("../../DATA Update/Female Age/extract/Female Total Population.csv", encoding = "UTF-8")
 
 
 #----read CSV----#
     df_fe = []
     df_ma = []
-    for i in range(0, 80+1, 5):
-        df_ma += [pd.read_csv("../../DATA/Male/male age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
-        df_fe += [pd.read_csv("../../DATA/Female/Female age {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+    for i in range(0, 74+1, 5):
+        df_ma += [pd.read_csv("../../DATA Update/Male age/extract/male {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+        df_fe += [pd.read_csv("../../DATA Update/Female Age/extract/female {0}-{1}.csv".format(i, i+4), encoding = "UTF-8")]
+    df_ma += [pd.read_csv("../../DATA Update/Male age/extract/male 80.csv", encoding = "UTF-8")]
+    df_fe += [pd.read_csv("../../DATA Update/Female Age/extract/female 80.csv", encoding = "UTF-8")]
 
 
 #----set index----#
@@ -50,7 +52,7 @@ def rangeage():
     total_age = [int(x)+int(y) for x, y in zip(male_age, female_age)]
     bar = ["Age 0-4","Age 5-9","Age 10-14","Age 15-19","Age 20-24","Age 25-29",\
           "Age 30-34","Age 35-39","Age 40-44","Age 45-49","Age 50-54","Age 55-59",\
-          "Age 60-64","Age 65-69","Age 70-74","Age 75-79","Age 80++"]
+          "Age 60-64","Age 65-69","Age 70-74","Age 75-79","Age 80"]
 
 #----pygal----#
     age_pyramid = pg.Pyramid(interpolate='cubic', style=NeonStyle, x_label_rotation=90)
@@ -59,5 +61,5 @@ def rangeage():
     age_pyramid.title = 'Population of each Age Range'
     age_pyramid.add("Male", male_age)
     age_pyramid.add("Female", female_age)
-    age_pyramid.render_to_file('Graph SVG/Range_both_en.svg')
+    age_pyramid.render_to_file('../Graph SVG/Range_both_en.svg')
 rangeage()
