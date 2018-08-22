@@ -58,7 +58,7 @@ def rangeage():
         age_pyramid.value_formatter = lambda x: "{:,}".format(int(x))
         age_pyramid.title = 'Age Seperation: Population of {0} AD ({1})'.format(y, Country)
         age_pyramid.add("Male", male_age)
-        age_pyramid.add("Female", female_age)  v 
+        age_pyramid.add("Female", female_age)   
         age_pyramid.render_to_file('Graph SVG/japan_range/japan_range_{0}.svg'.format(y))
         print(male_age, female_age)
 rangeage()

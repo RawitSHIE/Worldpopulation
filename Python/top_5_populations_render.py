@@ -53,7 +53,7 @@ def main():
     , "Latin America & Caribbean"\
     , "Arab World"\
     , 'Sub-Saharan Africa']
-    for k in range(1960,2017):
+    for k in range(1960,2018):
         m = str(k)
         for i in df_world['Country Name']:
             if i in restrict\
